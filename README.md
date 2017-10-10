@@ -3,7 +3,7 @@
 Сборка образа:
 
 ``` sh
-$ docker build -t reddit:latest .
+$ docker build -t reddit:latest github.com/7even/microservices
 ```
 
 Запуск:
