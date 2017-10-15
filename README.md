@@ -1,6 +1,6 @@
 # Microservices
 
-Сборка образа:
+Сборка образов:
 
 ``` sh
 $ docker build -t <your-login>/post:1.0 ./post-py
@@ -23,6 +23,8 @@ $ docker run -d --network=reddit \
 $ docker run -d --network=reddit \
   -p 9292:9292 <your-login>/ui:2.0
 ```
+
+Приложение будет доступно на `9292` порту.
 
 Остановка:
 
