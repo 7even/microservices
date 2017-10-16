@@ -3,7 +3,8 @@
 Сборка образов и запуск:
 
 ``` sh
-$ export USERNAME=*your_name* # подставить свой юзернейм
+$ cp .env.example .env
+$ emacs .env # подставить свой юзернейм в первой строке
 $ docker-compose up -d
 ```
 
