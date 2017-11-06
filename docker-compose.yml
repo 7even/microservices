@@ -58,7 +58,6 @@ services:
       - '8080:8080'
     networks:
       - back_net
-      - front_net
   grafana:
     image: grafana/grafana
     volumes:
