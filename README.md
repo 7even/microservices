@@ -15,3 +15,9 @@ $ docker-compose up -d
 ``` sh
 $ docker-compose down
 ```
+
+Запуск в Docker Swarm:
+
+``` sh
+$ docker stack deploy --compose-file=<(docker-compose -f docker-compose.infra.yml -f docker-compose.yml config 2>/dev/null) DEV
+```
