@@ -33,7 +33,7 @@ scrape_configs:
         - 'cadvisor:8080'
 
 rule_files:
-  - "alert.rules"
+  - ".rules.yml"
 
 alerting:
   alertmanagers:
