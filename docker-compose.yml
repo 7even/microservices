@@ -37,6 +37,11 @@ services:
     networks:
       - back_net
       - front_net
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: localhost:24224
+        tag: service.post
   comment:
     image: ${USERNAME}/comment:${COMMENT_VERSION}
     deploy:
@@ -82,6 +87,17 @@ services:
         condition: on-failure
         max_attempts: 3
         delay: 3s
+    networks:
+      - front_net
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: localhost:24224
+        tag: service.ui
+  zipkin:
+    image: openzipkin/zipkin
+    ports:
+      - "9411:9411"
     networks:
       - front_net
 
